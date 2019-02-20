@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>base-vue-demo</title>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but base-vue-demo doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app">
+			<h1>{{a}}</h1>
+    </div>
+    <!-- 链接一个外部脚本文件 -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script>
+    <script>
+      // 我们的数据对象
+      var data1 = { a: 1 };
+
+      // 该对象被加入到一个 Vue 实例中
+      var vm = new Vue({
+        // 为实例提供挂载元素
+				el: '#app', 
+        data: data1
+      });
+
+      // 获得这个实例上的属性
+      // 返回源数据中对应的字段
+      vm.a == data1.a; // => true
+
+      // 设置属性也会影响到原始数据
+      vm.a = 2;
+      data1.a; // => 2
+
+      // ……反之亦然
+      data1.a = 3;
+      vm.a; // => 3
+    </script>
+  </body>
+</html>
