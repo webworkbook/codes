@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     showThis () {
-      new ShowThis()
+      new ShowThis() /* eslint-disable-line */
     }
   },
   mounted () {

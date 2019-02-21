@@ -20,7 +20,7 @@ export default {
   methods: {
     async getUserInfo () {
       let form = { account: 'admin' }
-      const res = await this.$api.request.getUserInfo(form)
+      const res = await this.$api.request2.getUserInfo(form)
       // eslint-disable-next-line
       console.log(res)
 

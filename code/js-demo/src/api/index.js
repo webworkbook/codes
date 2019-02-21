@@ -1,5 +1,5 @@
-import request from './request'
+import request2 from './request'
 
 export default {
-  request
+  request2
 }
