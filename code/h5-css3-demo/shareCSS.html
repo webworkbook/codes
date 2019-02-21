@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="晓信 Web & 前端一起来学习">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="icon.ico">
+    <title>前端分享技术</title>
+    <style>
+    body {
+        padding:50px 100px; 
+    }
+    #background {
+      background-color:#b0c4de;
+      width: 300px;
+      height: 200px;
+      padding: 10px 20px 20px 10px;
+      text-align: center;
+      line-height: 200px;
+      box-sizing: border-box;
+      margin: 0 0 10px 0;
+      border: 5px dashed pink;
+      display: inline-block;
+    }
+    .background2 {
+      background: url('xiao.png') no-repeat;
+      background-position: 20% 10%;
+      width: 300px;
+      height: 200px;
+      text-align: center;
+      line-height: 200px;
+      color: red;
+      display: inline-block;
+    }
+    .text h1 {text-align:center;}
+    .text p.date {text-align:right;}
+    .text p.main {text-align:justify;text-indent:50px;}
+    
+    .fonts {font-size:100%;}
+    .fonts h1 {font-size:2.5em;}
+    .fonts h2 {font-size:1.875em;}
+    .fonts p {font-size:0.875em;}
+
+    .box {
+      width: 300px;
+      border: 25px solid green;
+      padding: 25px;
+      margin: 25px;
+    }
+    .box1 {
+        width: 300px;
+        height: 200px;
+        background-color: brown;
+    }
+    .box2 {
+      width: 270px;
+      padding:10px;
+      border:5px solid gray;
+      margin:0px;
+    }
+    .hiddens {
+        margin-top: 20px;
+        border: 1px solid #b0c4de;
+    }
+    .hiddens .hidden {
+        visibility:hidden;
+    }
+    .display span {margin-right: 20px; background-color: burlywood}
+    .display .span-inline-block {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+      }
+    .display .span-none {
+        display: none;
+    }
+    .display .span-block {
+        display: block;
+        width: 200px;
+        height: 200px;
+        background-color: cadetblue;
+    }
+    .positions {position: relative; width: 400px; height: 400px;border: 1px solid #ddd;}
+    .positions .absolute1 {
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        width: 50px;
+        height: 50px;
+        background-color: chartreuse;
+    }
+    .positions .absolute2 {
+        position: absolute;
+        top: 222px;
+        left: 240px;
+        width: 50px;
+        height: 50px;
+        background-color: chocolate;
+    }
+    .positions .absolute3 {
+        position: absolute;
+        top: 60px;
+        left: 77px;
+        width: 50px;
+        height: 50px;
+        background-color: darkorchid;
+    }
+    .floats {
+        overflow: hidden;
+        width: 300px;
+        height: 40px;
+        border: 3px solid #ccc;
+    }
+    .floats .left {
+        float: left;
+        width: 50px;
+        height: 40px;
+        background-color: darkolivegreen;
+    }
+    .floats .right {
+        float: right;
+        width: 50px;
+        height: 40px;
+        background-color: darksalmon;
+    }
+    .over .over_1 {
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .over .over_2 {
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .over .over_3 {
+        width: 100px;
+        overflow: scroll;
+    }
+    .radius {
+        border:2px solid #a1a1a1;
+        padding:10px 40px; 
+        background:#dddddd;
+        width:300px;
+        border-radius:25px;
+    }
+    .shadows {
+        width:300px;
+        height:100px;
+        background-color:yellow;
+        box-shadow: 10px 10px 5px #888888;
+    }
+    .gradients {
+        height: 200px;
+        background: -webkit-linear-gradient(red, blue); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(red, blue); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(red, blue); /* Firefox 3.6 - 15 */
+        background: linear-gradient(red, blue); /* 标准的语法 */
+    }
+    .gradients-circle {
+        margin-top: 20px; 
+        height: 200px;
+        background: -webkit-radial-gradient(red, green, blue); /* Safari 5.1 - 6.0 */
+        background: -o-radial-gradient(red, green, blue); /* Opera 11.6 - 12.0 */
+        background: -moz-radial-gradient(red, green, blue); /* Firefox 3.6 - 15 */
+        background: radial-gradient(red, green, blue); /* 标准的语法 */
+    }
+    .text-shadow {
+        text-shadow: 5px 5px 5px #FF0000;
+    }
+    .translate1 {
+        width:100px;
+        height:75px;
+        background-color:red;
+        border:1px solid black;
+    }
+    .translate2{
+        width:100px;
+        height:75px;
+        background-color:red;
+        border:1px solid black;
+        transform:translate(50px,100px);
+        -ms-transform:translate(50px,100px); /* IE 9 */
+        -webkit-transform:translate(50px,100px); /* Safari and Chrome */
+    }
+    .rotates1 {
+        margin-top: 150px;
+        width:100px;
+        height:75px;
+        background-color:red;
+        border:1px solid black;
+    }
+    .rotates2 {
+        width:100px;
+        height:75px;
+        background-color:red;
+        border:1px solid black;
+        transform:rotate(30deg);
+        -ms-transform:rotate(30deg); /* IE 9 */
+        -webkit-transform:rotate(30deg); /* Safari and Chrome */
+    }
+    .rotateX, .rotateY {
+        width:100px;
+        height:75px;
+        background-color:red;
+        border:1px solid black;
+    }
+    .rotateX {
+        transform: rotateX(50deg);
+    }
+    .rotateY {
+        transform: rotateY(50deg);
+    }
+    .transitions {
+        margin-top: 30px;
+        width:100px;
+        height:100px;
+        background:lightgreen;
+        transition:width 2s;
+        -webkit-transition:width 2s; /* Safari */
+    }
+    .transitions:hover {
+        width: 300px
+    }
+    .transitions2 {
+        margin-top: 30px;
+        width: 100px;
+        height: 100px;
+        background: lightsalmon;
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+        transition: width 2s, height 2s, transform 2s;
+    }
+    .transitions2:hover {
+        width: 200px;
+        height: 200px;
+        -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+        transform: rotate(180deg);
+    }
+
+    .animation {
+        width:200px;
+        height:200px;
+        background:red;
+        border-radius: 50%;
+        transform:rotate(0deg);
+        animation:ray 0.5s linear 2s infinite;/* Safari and Chrome */
+    }
+    @keyframes ray {
+        0%   {background:red; transform:rotate(0deg);}
+        25%  {background:yellow; transform:rotate(80deg);}
+        35%  {background:yellow; transform:rotate(80deg);}
+        55%  {background:blue; transform:rotate(130deg);}
+        70%  {background:green; transform:rotate(230deg);}
+        85%  {background:green; transform:rotate(320deg);}
+        100% {background:red; transform:rotate(360deg);}
+    }
+    </style>
+</head>
+<body>
+    <a href="shareHTML.html">返回</a>
+    <div id="div2" class="css">
+        <div id="background" class="background">
+            有背景的box
+        </div>
+        <div id="background2" class="background2">
+            有背景图片的box
+        </div>
+        <div class="text" id="text">
+            <h1>CSS text-align 实例</h1>
+            <p class="date">2019 年 2 月 20 号</p>
+            <p class="main">
+                “刚刚有个傻冒告诉我鲁迅姓周，真逗啊！周迅是个演员好吗？笑死我了！真想一板砖呼死他！
+                我记得鲁迅原名李大钊，浙江周树人，是著名的反法西斯音乐家，一生有2000多项发明，被称为太空步的创始人；
+                他拥有一个好嗓子，小学时就凭借着90分钟跑100米的优异成绩考上了新东方烹饪学校！他擅长110米栏,左手反打技术高超，拿手全垒打，大灌篮，后空翻180度右旋体360度后蹬地翻转720度，是他的经典动作,更难得可贵的是他落地没有水花。
+                他还是恶魔果实能力者，传说中的三忍之一，曾大闹天宫,后改邪归正，统一三国，传说他有107个弟兄,个个铜头铁臂，面目狰狞，这便是羊村的起源，她生平淡泊名利，后遇到高人阿凡达的指点，打死了白雪公主，与七个小矮人快乐的生活在一起。
+                并写了名侦探柯南的故事，名侦探柯南讲述的是要成为海贼王的八神太一收服了皮卡丘并登上创界山启动光能使者打败了鲨鱼辣椒，然后跟多啦A梦一起通过黄金十二宫收集七个葫芦娃召唤神龙复活二代火影；但最终为了保卫M78星云而成为了羊村村长，同蓝精灵们一起抵抗光头强的入侵的故事”
+            </p>
+            <p><b>注意：</b> 重置浏览器窗口大小查看 &quot;justify&quot; 是如何工作的。</p>
+        </div>
+        <div class="fonts" id="fonts">
+            <h1>This is heading 1</h1>
+            <h2>This is heading 2</h2>
+            <p>This is a paragraph.</p>
+            <p>在所有浏览器中，可以显示相同的文本大小，并允许所有浏览器缩放文本的大小。</p>
+            <p>为了避免Internet Explorer 中无法调整文本的问题，许多开发者使用 em 单位代替像素。1em和当前字体大小相等。在浏览器中默认的文字大小是16px。</p>
+        </div>
+
+        <div class="box" id="box">
+            这里是盒子内的实际内容。有 25px 内间距，25px 外间距、25px 绿色边框。
+        </div>
+        <div class="box1">
+
+        </div>
+        <div class="box2">上面的box是300 px宽。这个元素的总宽度也是300 px。
+        </div>
+
+        <div class="hiddens">
+            <h1>这是一个可见标题</h1>
+            <h1 class="hidden">这是一个隐藏标题</h1>
+            <p>注意, 实例中的visibility隐藏标题仍然占用空间。</p>   
+        </div>
+
+        <div class="display">
+           <span>行内元素</span>
+           <span class="span-inline-block">行内块元素</span>
+           <span class="span-none">块元素</span>
+           <span class="span-block">块元素</span>
+        </div>
+
+        <div class="positions">
+           <div class="absolute1"></div>
+           <div class="absolute2"></div>
+           <div class="absolute3"></div>
+        </div>
+
+        <div class="floats">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+
+        <div class="over">
+            <p class="over_1">超出隐藏21312312312312312312312312323123</p>
+            <p class="over_2">超出点点点123123123123123123123123123123</p>
+            <p class="over_3">123123123123123123123123123123超出滑块</p>
+        </div>
+
+        <div class="radius">
+            border-radius 属性允许您为元素添加圆角边框！
+        </div>
+
+        <div class="shadows">
+        </div>
+
+        <div class="gradients"></div>
+        <div class="gradients-circle"></div>
+
+        <h1 class="text-shadow">山东省滕州市 — 大滕帝国</h1>
+
+        <div class="translate1">before</div>
+        <div class="translate2">after</div>
+
+        <div class="rotates1">before</div>
+        <div class="rotates2">after</div>
+
+        <div class="rotateX">
+           旋转
+        </div>
+        <div class="rotateY">
+           翻转
+        </div>
+
+        <div class="transitions">
+           放上变长， 移开还原
+        </div>
+
+        <div class="transitions2">鼠标移动到上面，旋转变大</div>
+
+
+        <div class="animation">
+          旋转 闭眼
+        </div>
+    </div>
+    <a href="home-work.html">作业</a>
+</body>
+</html>
