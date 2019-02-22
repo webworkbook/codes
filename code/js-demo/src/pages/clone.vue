@@ -76,7 +76,7 @@ export default {
       this.isEdit = !this.isEdit
       
       if (!this.isEdit) {
-        this.previewData = JSON.parse(JSON.stringify(this.form))
+        this.previewData = JSON.parse(JSON.stringify())
       }
     },
     onCancel () {
