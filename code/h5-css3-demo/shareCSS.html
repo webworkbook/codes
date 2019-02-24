@@ -25,7 +25,7 @@
         display: inline-block;
       }
       .background2 {
-        background: url('xiao.png') no-repeat;
+        background: url("xiao.png") no-repeat;
         background-position: 20% 10%;
         width: 300px;
         height: 200px;
@@ -187,9 +187,21 @@
       .gradients-circle {
         margin-top: 20px;
         height: 200px;
-        background: -webkit-radial-gradient(red, green, blue); /* Safari 5.1 - 6.0 */
-        background: -o-radial-gradient(red, green, blue); /* Opera 11.6 - 12.0 */
-        background: -moz-radial-gradient(red, green, blue); /* Firefox 3.6 - 15 */
+        background: -webkit-radial-gradient(
+          red,
+          green,
+          blue
+        ); /* Safari 5.1 - 6.0 */
+        background: -o-radial-gradient(
+          red,
+          green,
+          blue
+        ); /* Opera 11.6 - 12.0 */
+        background: -moz-radial-gradient(
+          red,
+          green,
+          blue
+        ); /* Firefox 3.6 - 15 */
         background: radial-gradient(red, green, blue); /* 标准的语法 */
       }
       .text-shadow {
@@ -303,6 +315,37 @@
           transform: rotate(360deg);
         }
       }
+      .space {
+        width: 400px;
+        height: 200px;
+        position: relative;
+        border-bottom: 3px solid white;
+      }
+      .wheel {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid white;
+        position: absolute;
+        left: 2px;
+        top: 148px;
+        animation: move 3s forwards linear infinite;
+      }
+      .wheel::before {
+        content: "";
+        width: 25px;
+        height: 2px;
+        display: block;
+        background-color: white;
+        position: absolute;
+        left: 25px;
+        top: 25px;
+      }
+      @keyframes move {
+        to {
+          transform: translateX(350px) rotate(859deg);
+        }
+      }
     </style>
   </head>
   <body>
@@ -319,19 +362,28 @@
         <h1>CSS text-align 实例</h1>
         <p class="date">2019 年 2 月 20 号</p>
         <p class="main">
-          “刚刚有个傻冒告诉我鲁迅姓周，真逗啊！周迅是个演员好吗？笑死我了！真想一板砖呼死他！ 我记得鲁迅原名李大钊，浙江周树人，是著名的反法西斯音乐家，一生有2000多项发明，被称为太空步的创始人；
+          “刚刚有个傻冒告诉我鲁迅姓周，真逗啊！周迅是个演员好吗？笑死我了！真想一板砖呼死他！
+          我记得鲁迅原名李大钊，浙江周树人，是著名的反法西斯音乐家，一生有2000多项发明，被称为太空步的创始人；
           他拥有一个好嗓子，小学时就凭借着90分钟跑100米的优异成绩考上了新东方烹饪学校！他擅长110米栏,左手反打技术高超，拿手全垒打，大灌篮，后空翻180度右旋体360度后蹬地翻转720度，是他的经典动作,更难得可贵的是他落地没有水花。
           他还是恶魔果实能力者，传说中的三忍之一，曾大闹天宫,后改邪归正，统一三国，传说他有107个弟兄,个个铜头铁臂，面目狰狞，这便是羊村的起源，她生平淡泊名利，后遇到高人阿凡达的指点，打死了白雪公主，与七个小矮人快乐的生活在一起。
           并写了名侦探柯南的故事，名侦探柯南讲述的是要成为海贼王的八神太一收服了皮卡丘并登上创界山启动光能使者打败了鲨鱼辣椒，然后跟多啦A梦一起通过黄金十二宫收集七个葫芦娃召唤神龙复活二代火影；但最终为了保卫M78星云而成为了羊村村长，同蓝精灵们一起抵抗光头强的入侵的故事”
         </p>
-        <p><b>注意：</b> 重置浏览器窗口大小查看 &quot;justify&quot; 是如何工作的。</p>
+        <p>
+          <b>注意：</b> 重置浏览器窗口大小查看 &quot;justify&quot;
+          是如何工作的。
+        </p>
       </div>
       <div class="fonts" id="fonts">
         <h1>This is heading 1</h1>
         <h2>This is heading 2</h2>
         <p>This is a paragraph.</p>
-        <p>在所有浏览器中，可以显示相同的文本大小，并允许所有浏览器缩放文本的大小。</p>
-        <p>为了避免Internet Explorer 中无法调整文本的问题，许多开发者使用 em 单位代替像素。1em和当前字体大小相等。在浏览器中默认的文字大小是16px。</p>
+        <p>
+          在所有浏览器中，可以显示相同的文本大小，并允许所有浏览器缩放文本的大小。
+        </p>
+        <p>
+          为了避免Internet Explorer 中无法调整文本的问题，许多开发者使用 em
+          单位代替像素。1em和当前字体大小相等。在浏览器中默认的文字大小是16px。
+        </p>
       </div>
 
       <div class="box" id="box">
@@ -402,6 +454,11 @@
 
       <div class="animation">
         旋转 闭眼
+      </div>
+      <div class="space">
+        <div class="wheel">
+          <span class="line"></span>
+        </div>
       </div>
     </div>
     <a href="home-work.html">作业</a>

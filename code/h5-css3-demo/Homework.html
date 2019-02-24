@@ -8,27 +8,56 @@
     }
     .container {
       position: relative;
-      width: 800px;
-      height: 800px;
-      background-color: rgb(39, 35, 35);
+      width: 500px;
+      height: 500px;
+      border: 1px dashed black;
+      background-color: white;
     }
-
-    #sonar {
-      width: 100px;
-      height: 100px;
+    .container div{
+      position: absolute
+    }
+    .sonar {
+      width: 60px;
+      height: 60px;
       background: linear-gradient(rgb(225, 0, 255), red);
       border-radius: 50%;
     }
     .center_style {
-      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
+    .path {
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      border: 1px dashed rgb(129, 96, 96);
+    }
+    #mercury {
+      width: 10px;
+      height: 10px;
+      background-color: aqua;
+      border-radius: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 99;
+    }
+    .rotate {
+      transform-origin: 100px, 100px;
+      animation: rotation 8s linear infinite;
+    }
+    @keyframes rotation {
+        to {
+          transform: rotate(1turn);
+        }
+      }
   </style>
 </head>
 <body>
   <div class="container">
-    <div id="sonar" class="center_style"></div>
+    <div class="sonar center_style"></div>
+    <div class="path center_style">
+      <div id="mercury" class="rotate"></div>
+    </div>
   </div>
 </body>
