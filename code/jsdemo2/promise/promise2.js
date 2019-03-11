@@ -4,11 +4,14 @@ const p1 = new Promise((resolve, reject) => {
   reject(new Error('abc'))
 })
 
-p1.then(result => {
-  console.log(result)
-}, err => {
-  console.log('err p1:', err)
-})
+p1.then(
+  result => {
+    console.log(result)
+  },
+  err => {
+    console.log('err p1:', err)
+  }
+)
 
 const p2 = new Promise((resolve, reject) => {
   console.log('reject error p2')
@@ -17,8 +20,6 @@ const p2 = new Promise((resolve, reject) => {
 
 p2.then(result => {
   console.log('p2 success: ', result)
-})
-.catch(err => {
+}).catch(err => {
   console.log('err p2:', err)
 })
-
