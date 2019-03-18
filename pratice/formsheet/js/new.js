@@ -92,14 +92,11 @@ window.onload = function () {
 		//大于10个字符非常强
 		if (this.value.length > 10) {
 			aEm[2].className = "k";
-
 		}
 		else {
 			aEm[2].className = "kiss";
 		}
 	}
-
-
 
 	pwd.onblur = function () {
 		var m = findStr(pwd.value, pwd.value[0]);
