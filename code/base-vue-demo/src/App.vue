@@ -6,7 +6,7 @@
     </div>
     <!-- 路由出口 -->
     <!-- 路由匹配到到组建将渲染在这里 -->
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
